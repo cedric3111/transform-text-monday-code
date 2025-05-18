@@ -68,7 +68,7 @@ app.post("/monday/execute_action", authorizeRequest, async (req, res) => {
     return res.status(200).send({
       outputFields: {
         itemId: "test",
-        statusResponse: "success, deployment worked!",
+        statusResponse: "Well done!",
         boardId: "test",
       },
     })
