@@ -23,3 +23,4 @@ jobs:
         with:
           token: ${{ secrets.MONDAY_TOKEN }}
           appId: 10407718
+          force: true
