@@ -64,6 +64,7 @@ app.post("/monday/execute_action", authorizeRequest, async (req, res) => {
       transformedText
     )
 
+    //Return list of output fields
     return res.status(200).send({
       outputFields: {
         itemId: "test",
