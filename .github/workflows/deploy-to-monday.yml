@@ -1,0 +1,26 @@
+name: Deploy to Monday.com
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+      - master
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Deploy using app ID
+      - name: Deploy to monday code
+        uses: mondaycom/monday-code-deploy-action@master
+        with:
+          token: ${{ secrets.MONDAY_TOKEN }}
+          appId: 10110073
+          region: eu
