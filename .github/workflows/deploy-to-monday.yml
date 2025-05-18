@@ -22,5 +22,5 @@ jobs:
         uses: mondaycom/monday-code-deploy-action@master
         with:
           token: ${{ secrets.MONDAY_TOKEN }}
-          appId: 10110073
+          appId: 10407718
           region: eu
